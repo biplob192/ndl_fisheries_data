@@ -21,6 +21,18 @@ class ThingspeakRepository extends BaseController implements ThingspeakRepositor
         }
     }
 
+    public function fisheries_index()
+    {
+        try {
+            $response = Http::get('https://api.thingspeak.com/channels/2303991/feeds.json');
+            return view('thingspeak.fisheries_index', ['response' => $response['feeds'], 'channel' => $response['channel']]);
+        } catch (Exception $e) {
+
+            $error = $e->getMessage();
+            return $this->sendError('Internal server error.', $error, 500);
+        }
+    }
+
     public function getData($request)
     {
         try {

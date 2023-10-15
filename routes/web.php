@@ -41,6 +41,7 @@ Route::group(['middleware' => 'login'], function () {
 
         Route::get('thingspeak/check', [ThingspeakController::class, 'check'])->name('thingspeak.check');
         Route::get('thingspeak/index', [ThingspeakController::class, 'index'])->name('thingspeak.index');
+        Route::get('thingspeak/fisheries/index', [ThingspeakController::class, 'fisheries_index'])->name('thingspeak.fisheries_index');
         Route::get('thingspeak/get/data', [ThingspeakController::class, 'getData'])->name('thingspeak.getData');
     });
 

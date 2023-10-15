@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Soft | Login</title>
+    <title>e-Fisheries | Login</title>
 
     @include('include.master_style')
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="{{asset('dist')}}/css/adminlte.min.css">
-    <link rel="stylesheet" href="{{asset('plugins')}}/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('dist') }}/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ asset('plugins') }}/icheck-bootstrap/icheck-bootstrap.min.css">
 
     <style>
         body {
-            /* background-image: url('{{ asset("images/bg1.jpg") }}'); */
+            /* background-image: url('{{ asset('images/bg1.jpg') }}'); */
             /* Replace with the actual path to your image */
             background-size: cover;
             /* Adjust to your preference */
@@ -54,7 +54,7 @@
             max-width: 100%;
             max-height: 60px;
             /* Adjust the height as needed */
-            margin-right: 20px;
+            /* margin-right: 20px; */
             /* Add some spacing between the logo and text */
         }
     </style>
@@ -63,22 +63,23 @@
 
 <body class="hold-transition login-page">
     <div class="logo-container">
-        <img src='{{ asset("images/ndl_logo.png") }}' alt="NDL LOGO" srcset="">
+        <img src='{{ asset('images/ndl_logo.png') }}' alt="NDL LOGO" srcset="">
     </div>
     <div class="login-box">
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <h4>Smart Energy Monitoring</h4>
+                {{-- <h4>Smart Energy Monitoring</h4> --}}
+                <img src='{{ asset('images/fisheries_logo.jpg') }}' alt="FISHERIES LOGO" srcset="">
                 {{-- <img src='{{ asset("images/ndl_logo.png") }}' alt="NDL LOGO" srcset=""> --}}
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
-                @if(session()->has('error'))
-                <p class="login-box-msg"><span style="color: red;">{{ session()->get('error') }}</span> </p>
+                @if (session()->has('error'))
+                    <p class="login-box-msg"><span style="color: red;">{{ session()->get('error') }}</span> </p>
                 @endif
 
-                <form action="{{route('auth.login')}}" method="post">
+                <form action="{{ route('auth.login') }}" method="post">
                     @csrf
                     <div class="input-group mb-3">
                         <input type="email" name="email" class="form-control" placeholder="Email">

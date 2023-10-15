@@ -23,6 +23,11 @@ class ThingspeakController extends Controller
         return $this->thingspeakRepository->index();
     }
 
+    public function fisheries_index()
+    {
+        return $this->thingspeakRepository->fisheries_index();
+    }
+
     public function getData(Request $request)
     {
         return $this->thingspeakRepository->getData($request);
