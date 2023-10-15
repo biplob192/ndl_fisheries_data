@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sensor_data', function (Blueprint $table) {
+        Schema::create('fisheries_data', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('entry_id');
-            $table->double('voltage', 8, 2)->nullable();
-            $table->double('current', 8, 2)->nullable();
-            $table->double('power', 8, 2)->nullable();
+            $table->double('dissolved_oxygen', 8, 2)->nullable();
+            $table->double('ph', 8, 2)->nullable();
+            $table->double('turbidity', 8, 2)->nullable();
+            $table->double('water_temperature', 8, 2)->nullable();
+            $table->double('electrical_conductivity', 8, 2)->nullable();
             $table->timestamp('datetime')->nullable();
             $table->timestamps();
         });
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sensor_data');
+        Schema::dropIfExists('fisheries_data');
     }
 };
