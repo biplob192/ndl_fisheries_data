@@ -38,11 +38,11 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Dissolved Oxygen (DO)</th>
+                                        <th>Dissolved Oxygen (mg/L)</th>
                                         <th>pH</th>
-                                        <th>Turbidity</th>
-                                        <th>Water Temperature</th>
-                                        <th>Electrical Conductivity (EC)</th>
+                                        <th>Turbidity (NTU)</th>
+                                        <th>Water Temperature (℃)</th>
+                                        <th>Electrical Conductivity (µS/cm)</th>
                                         <th>Date-Time</th>
                                     </tr>
                                 </thead>
@@ -63,11 +63,11 @@
                                 <tfoot>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Dissolved Oxygen (DO)</th>
+                                        <th>Dissolved Oxygen (mg/L)</th>
                                         <th>pH</th>
-                                        <th>Turbidity</th>
-                                        <th>Water Temperature</th>
-                                        <th>Electrical Conductivity (EC)</th>
+                                        <th>Turbidity (NTU)</th>
+                                        <th>Water Temperature (℃)</th>
+                                        <th>Electrical Conductivity (µS/cm)</th>
                                         <th>Date-Time</th>
                                     </tr>
                                 </tfoot>
