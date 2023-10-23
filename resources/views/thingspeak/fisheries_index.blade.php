@@ -54,7 +54,7 @@
                                             <td>{{ $data['field2'] }}</td>
                                             <td>{{ $data['field3'] }}</td>
                                             <td>{{ $data['field4'] }}</td>
-                                            <td>{{ $data['field4'] }}</td>
+                                            <td>{{ $data['field5'] }}</td>
                                             <td>{{ date('F j, Y, g:i A', strtotime($data['created_at'])) }}</td>
                                         </tr>
                                     @endforeach
